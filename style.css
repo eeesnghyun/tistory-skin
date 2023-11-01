@@ -1,28 +1,10 @@
 @charset "UTF-8";
-/****************************** InputMono FONT ******************************/
+/** Font setting : KoPub Dotum **/
 @font-face {
-  font-family: "InputMono";
-  font-style: normal;
-  font-weight: 300;
-  src: local("☺"), url("images/InputMono-Light.woff") format("woff"),
-    url("images/InputMono-Light.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "InputMono";
-  font-style: normal;
-  font-weight: 400;
-  src: local("☺"), url("images/InputMono-Regular.woff") format("woff"),
-    url("images/InputMono-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "InputMono";
-  font-style: normal;
-  font-weight: 500;
-  src: local("☺"), url("images/InputMono-Medium.woff") format("woff"),
-    url("images/InputMono-Medium.woff2") format("woff2");
-  font-display: swap;
+     font-family: 'KoPub Dotum';
+     src: url('images/KoPub Dotum Light.ttf') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }
 
 /* css reset */
@@ -80,8 +62,7 @@ select,
 strong,
 table,
 textarea {
-  font-family:"맑은 고딕", "Malgun Gothic",
-    "Apple SD Gothic Neo", "돋움", "dotum", sans-serif;
+  font-family:"KoPub Dotum", sans-serif;
   font-size: 16px;
   font-weight: 400;
   word-break: keep-all;
@@ -1916,7 +1897,7 @@ html {
 .area_sidebar .link_item .c_cnt {
   font-size: 10px;
   border: 1px solid;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.01rem 0.4rem;
   line-height: 1.4;
 }
@@ -2340,7 +2321,7 @@ aside .tag_board {
   align-items: baseline;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 3px 0;
+  padding: 25px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -2637,10 +2618,10 @@ aside .tag_board {
   height: 42px;
   border: none;
   color: #fff;
-  border-radius: 2em;
+  border-radius: 0.5em;
   cursor: pointer;
-  -webkit-box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 5%);
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 5%);
+  /* -webkit-box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 5%); */
 }
 @media screen and (max-width: 1025px) {
   .area_reply .box_reply_info {
@@ -3780,11 +3761,12 @@ aside .tag_board {
   padding-top: 0.8em;
 }
 .article_view blockquote {
-  margin: 0;
+  margin: 20px auto 20px!important;
   padding-left: 19px;
-  border-left: 1px solid;
-  font-size: 16px;
-  line-height: 1.75;
+  border-left: 5px solid;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  line-height: 2.5;
   color: var(--color-level-1);
 }
 .article_view ol,
@@ -3838,6 +3820,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   white-space: pre-wrap;
   position: relative;
   margin-top: 1em;
+  margin-bottom: 1em;
   border-radius: 0.6em;
   box-shadow: 0 0.1em 0.4em rgb(0 0 0 / 30%);
 }
@@ -4721,9 +4704,9 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
     visibility: initial;
   }
   .area_sidebar .inner_sidebar .sidebar_header .link_logo .img_logo {
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    width: 120px;
+    height: 120px;
+    /* box-shadow: 0 4px 10px rgb(0 0 0 / 10%); */
     border-radius: 6px;
     display: none;
   }
@@ -5794,6 +5777,12 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   }
   #tt-body-page .imageblock span {
     display: block;
+  }
+
+  figure.imageblock {
+    background-color: #e6e6e6!important;
+    padding: 5px!important;
+    border-radius: 0.5rem!important;  
   }
 
   #tt-body-page .coffee_Gift {
