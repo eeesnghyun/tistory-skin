@@ -1813,6 +1813,38 @@ html {
   }
 }
 
+.visit_contents {
+  display: block;
+  background-color: white;
+}
+.visit_items {
+  display: flex; 
+  justify-content: space-around;
+}
+.visit_item {
+  display: block; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%; 
+  padding: 0px 20px 0px 20px;
+}
+.visit_title_small {
+  font-size: 10px; 
+  font-weight: 800;
+}
+.visit_info {
+  margin-top: 0; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: baseline;
+}
+.visit_title {
+  font-size: 16px;
+}
+.visit_counts {
+  margin-top: 5px; display: inline-block;
+}
+
 .area_sidebar {
   position: relative;
 }
@@ -4711,7 +4743,9 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
     display: none;
   }
   .area_sidebar .inner_sidebar .sidebar_header .link_logo strong {
-    font-size: 24px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
   }
   .area_sidebar .inner_sidebar .sidebar_header .tit_logo {
     display: inline-block;
@@ -5221,6 +5255,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .area_sidebar .sidebar_header .link_logo .text-inner {
     margin-left: 5%;

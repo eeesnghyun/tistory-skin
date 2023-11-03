@@ -102,6 +102,7 @@
         <s_sidebar>
           <s_sidebar_element>
             <!-- 인기 검색어 (태그) -->
+            <!--
             <div class="tagbox">
               <h3>인기 검색어</h3>
               <ul>
@@ -112,6 +113,7 @@
                 </s_random_tags>
               </ul>
             </div>
+            -->
           </s_sidebar_element>
         </s_sidebar>
       </div>
@@ -152,9 +154,41 @@
               </div>
               </s_sidebar_element>
               <s_sidebar_element>
+                <!-- 방문자수 -->
+                <div class="visit_contents"> 
+                  <div class="visit_items">	
+                    <span class="visit_item">
+                      <strong class="visit_title_small">ALL</strong>
+                      <div class="visit_info">
+                        <p class="visit_title">전체 방문자</p>
+                        <strong class="visit_counts">[##_count_total_##]</strong>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="visit_items">	
+                    <span class="visit_item">
+                      <strong class="visit_title_small">TODAY</strong>
+                      <div class="visit_info">
+                        <p class="visit_title">오늘 방문자</p>
+                        <strong class="visit_counts">[##_count_today_##]</strong>
+                      </div>
+                    </span>
+                    <span class="visit_item">
+                      <strong class="visit_title_small">YESTERDAY</strong>
+                      <div class="visit_info">
+                        <p class="visit_title">어제 방문자</p>
+                        <strong class="visit_counts">[##_count_yesterday_##]</strong>
+                      </div>
+                    </span>
+                  </div>	
+                </div>
+              </s_sidebar_element>
+              <s_sidebar_element>
                 <!-- 카테고리 -->
                 <div class="category">
+                  <!--
                   <h2 class="sidebar_tit">Menu</h2>
+                  -->
                   <div class="list_category color">
                     [##_category_list_##]
                   </div>
@@ -170,7 +204,9 @@
                 <div class="sidebar_sns">
                   <!-- 링크 -->
                   <div class="box_sns">
+                  <!--
                     <h2 class="sidebar_tit">Social Channels</h2>
+                  -->
                     <ul class="list_sns">
                       <s_link_rep>
                         <li>
@@ -510,7 +546,7 @@
                     <!-- area_related -->
                     <s_article_related>
                       <div class="area_related border_b_mode">
-                        <h3 class="title_related">당신이 좋아할만한 콘텐츠</h3>
+                        <h3 class="title_related">연관 포스팅</h3>
                         <ul class="list_related">
                           <s_article_related_rep>
                             <li class="item_related">
