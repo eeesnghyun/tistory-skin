@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/** Font setting : KoPub Dotum **/
+/** Font setting : SUITE-Regular **/
 @font-face {
-     font-family: 'KoPub Dotum';
-     src: url('images/KoPub Dotum Light.ttf') format('woff');
-     font-weight: normal;
+     font-family: 'SUITE-Regular';
+     src: url('./images/SUITE-Regular.woff2') format('woff2');
+     font-weight: 400;
      font-style: normal;
 }
 
@@ -62,7 +62,7 @@ select,
 strong,
 table,
 textarea {
-  font-family:"KoPub Dotum", sans-serif;
+  font-family:"SUITE-Regular", sans-serif;
   font-size: 16px;
   font-weight: 400;
   word-break: keep-all;
@@ -628,8 +628,8 @@ i {
 /*  // darkmode, lightmode의 관한 STYLE */
 
 [data-dark="false"] {
-  --g-bg-color: #fff;
-  --s-bg-color: #e6e6e6;
+  --g-bg-color: #fffffe;
+  --s-bg-color: #3f3c3c;
   --s-bg-color-3: #eef2f6;
   --s-bg-color-4: #f8f9fa;
   --s-bg-color-5: #fafafa;
@@ -637,7 +637,8 @@ i {
   --color-level-1: #333;
   --color-level-2: rgb(157, 170, 182);
   --color-level-3: #777;
-  --border-color: #e4e8eb;
+  --color-level-9: #333;
+  --border-color: #fffffe;
   --border-color-2: #ccc;
   --search-bg-color: #fff;
 }
@@ -651,6 +652,7 @@ i {
   --color-level-1: #fff;
   --color-level-2: #e6e6e6;
   --color-level-3: #c5cad5;
+  --color-level-9: #333;
   --border-color: #36393d;
   --border-color-2: #656565;
   --search-bg-color: #222529;
@@ -662,11 +664,17 @@ i {
 .bg_them_mode {
   background-color: var(--g-bg-color);
 }
+.color-list {
+  color: #fffffe;
+}
 .color {
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .color-2 {
   color: var(--color-level-2);
+}
+.color-3 {
+  color: var(--color-level-9);
 }
 .border_mode {
   border: 1px solid var(--border-color);
@@ -1307,8 +1315,8 @@ i {
   background-color: #545c65;
 }
 .theme_gray .newItem {
-  border: 1px solid #545c65;
-  color: #545c65;
+  background-color: #f66256;
+  color: #fffffe;
 }
 .theme_gray .skin_link .swiper-pagination-bullet-active {
   background-color: #545c65;
@@ -1318,7 +1326,7 @@ i {
   color: #545c65;
 }
 .theme_gray .area_sidebar .link_item .c_cnt {
-  color: #545c65;
+  color: #fffffe;
 }
 .theme_gray .gtae .item.is-active a {
   color: #545c65 !important;
@@ -1627,7 +1635,7 @@ html {
     display: block;
     width: 100%;
     height: 100%;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
   .box_header .search_content .inp_submit {
     display: none;
@@ -1673,7 +1681,7 @@ html {
     height: 24px;
     padding: 4px;
     box-sizing: border-box;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
   .box_header .tagbox {
     border-top: 1px solid var(--border-color);
@@ -1815,7 +1823,9 @@ html {
 
 .visit_contents {
   display: block;
-  background-color: white;
+  background-color: #fffffe;
+  color: #000;
+  box-shadow: 0 4px 12px rgb(187, 187, 187, 0.4);
 }
 .visit_items {
   display: flex; 
@@ -2197,7 +2207,7 @@ aside .tag_board {
   font-size: 24px;
 }
 .area_paging .link_page:hover {
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .area_paging .paging_num {
   display: inline-block;
@@ -2602,7 +2612,7 @@ aside .tag_board {
   font-size: 14px;
   vertical-align: top;
   resize: none;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .area_reply .form_guest {
   margin: 0 -4px;
@@ -3531,12 +3541,12 @@ aside .tag_board {
 .category_type_related .thumnail {
   display: block;
   width: 100%;
-  padding-top: 50%;
+  padding-top: 80%;
   background-size: cover;
   background-position: 50% 50%;
   border-radius: 6px;
-  background: url("images/thumnail-bg.png") no-repeat center center
-    var(--s-bg-color);
+  /* background: url("images/thumnail-bg.png") no-repeat center center
+    var(--s-bg-color); */
   background-size: cover;
   -webkit-transition: background-image 0.2s ease-in;
   transition: background-image 0.2s ease-in;
@@ -3669,7 +3679,7 @@ aside .tag_board {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 48px;
   font-size: 28px;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
   text-decoration: none;
   text-align: center;
 }
@@ -3753,7 +3763,7 @@ aside .tag_board {
   box-sizing: border-box;
 }
 .article_view p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.88;
   margin-top: 1.4em;
   margin-bottom: 1.4em;
@@ -3767,7 +3777,7 @@ aside .tag_board {
 .article_view h3,
 .article_view h4,
 .article_view p {
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .article_view h1 {
   font-size: 32px;
@@ -3799,7 +3809,7 @@ aside .tag_board {
   border-bottom: 1px solid;
   font-size: 20px;
   line-height: 2.5;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .article_view ol,
 .article_view ul {
@@ -3809,7 +3819,7 @@ aside .tag_board {
 .article_view ul li {
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
   word-break: break-all;
   padding-bottom: 0.4rem;
   padding-top: 0.4rem;
@@ -3822,7 +3832,7 @@ aside .tag_board {
   margin-bottom: 6px;
   font-size: 16px;
   line-height: 1.75;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
   word-break: break-all;
   list-style: auto;
 }
@@ -3831,7 +3841,7 @@ aside .tag_board {
 }
 figure[data-ke-type="opengraph"] div.og-text p.og-title,
 #tt-body-page figure[data-ke-type="opengraph"] div.og-text p.og-title {
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 #tt-body-page iframe {
   border: 1px solid var(--border-color);
@@ -3870,11 +3880,14 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
 
 .article_view .cap1 {
   font-size: 14px;
-  color: var(--color-level-1);
+  color: var(--color-level-1)!important;
 }
 .article_view a {
   display: inline-block;
   color: #3d62ce;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  padding: 0 10px;
 }
 .article_view a:hover {
   opacity: 0.7;
@@ -4479,7 +4492,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   .list_post .item_post header {
     position: absolute;
     left: 20px;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
     padding: 20px 0;
   }
   .list_type_card .item_card a {
@@ -4498,7 +4511,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
     background: var(--s-bg-color-3);
     font-size: 12px;
     line-height: 1;
@@ -4884,7 +4897,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   .mo_footer_menu .menu {
     display: inline-block;
     width: auto;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
   .mo_footer_menu .menu a {
     display: block;
@@ -5309,7 +5322,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   }
 
   .area_sidebar .link_tool {
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
 
   .top-btn {
@@ -5503,7 +5516,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   }
   #tt-body-page .hljs {
     font-family: "InputMono";
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 500;
     overflow: auto;
     min-width: 100%;
@@ -5549,7 +5562,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   /* 다운로드 블럭 */
   figure.fileblock .filename,
   #tt-body-page figure.fileblock .filename {
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
   /* //다운로드 블럭 */
 
@@ -5815,9 +5828,11 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
   }
 
   figure.imageblock {
-    background-color: #e6e6e6!important;
-    padding: 5px!important;
+    /* background-color: #3f3c3c!important; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -80px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 10px!important;
     border-radius: 0.5rem!important;  
+    margin-bottom: 5px;
   }
 
   #tt-body-page .coffee_Gift {
@@ -6100,7 +6115,7 @@ figure[data-ke-type="opengraph"] div.og-text p.og-title,
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    color: var(--color-level-1);
+    color: var(--color-level-1)!important;
   }
   #tt-body-page .gtae .item-r {
     margin-left: 10px;
