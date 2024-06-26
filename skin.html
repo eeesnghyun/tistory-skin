@@ -7,11 +7,14 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=5 user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="naver-site-verification" content="fff15dfe11f190450ad74940b187b1e03ebefd90" />
+
   <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]"/>
   <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico"/>
   <link rel="stylesheet" href="./style.css"/>
   <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
   <script charset="UTF-8" src="./images/jQuery.min.js"></script>
+  <!--<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>-->
   <script defer charset="UTF-8" src="./images/menuIcon.js"></script>
   <script defer charset="UTF-8">
     $(function(){
@@ -129,7 +132,7 @@
             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
               <s_if_var_logoImage>
                 <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]" width="70" height="70">
-                <strong class="color">[##_var_blogName_##]</strong>
+                <strong class="color" style="display: none;">[##_var_blogName_##]</strong>
               </s_if_var_logoImage>
               <s_not_var_logoImage>
                 <strong class="color">[##_var_blogName_##]</strong>
@@ -205,15 +208,32 @@
                 <div class="sidebar_sns">
                   <!-- 링크 -->
                   <div class="box_sns">
-                  <!--
+                    <!--
                     <h2 class="sidebar_tit">Social Channels</h2>
-                  -->
+                  
                     <ul class="list_sns color-list">
                       <s_link_rep>
                         <li>
-                          <a href="[##_link_url_##]" class="link_add" target="_blank" data-site="[##_link_site_##]" rel="noopener">[##_link_site_##]</a>
+                          <a href="[##_link_url_##]" target="_blank" data-site="[##_link_site_##]" rel="noopener">[##_link_site_##]</a>
                         </li>
                       </s_link_rep>
+                    </ul>
+                    --> 
+                    <div class="visit_contents">
+                      <div class="visit_items">
+                        <span class="visit_item">
+                          <div class="link_info">
+                            즐겨찾기
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                    <ul class="list_sns2">
+                       <s_link_rep>
+                          <li>
+                            <a href="[##_link_url_##]" target="_blank" data-site="[##_link_site_##]" rel="noopener">[##_link_site_##]</a>
+                          </li>
+                        </s_link_rep>
                     </ul>
                   </div>
                 </div>
@@ -372,7 +392,7 @@
                                         </div>
                                       </div>
                                       <strong class="name">[##_cover_item_title_##]</strong>
-                                      <time class="date">[##_cover_item_date_##]</time>
+                                      <time class="date">[##_cover_item_simple_date_##]</time>
                                     </s_cover_item_article_info>
                                   </header>
                                   <span class="thumnail item-thumbnail" data-src="<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>"></span>
@@ -430,7 +450,9 @@
                                     <span class="thumnail item-thumbnail" data-src="<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>"></span>
                                     <div class="info">
                                       <strong>[##_cover_item_title_##]</strong>
+                                      <!--
                                       <p class="text">[##_cover_item_summary_##]</p>
+                                      -->
                                     </div>
                                   </a>
                                 </li>
@@ -464,12 +486,14 @@
                 <s_list_rep>
                   <li class="item_category color">
                     <a href="[##_list_rep_link_##]" class="link_category">
-                      <p class="category_text">[##_list_rep_summary_##]</p>
-                      <span class="thumnail item-thumbnail" data-src="<s_list_rep_thumbnail>[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>"></span>
+                      <p class="category_text">[##_list_rep_summary_##]</p>                      
+                      <span class="thumnail item-thumbnail" data-src="<s_list_rep_thumbnail>[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>"></span>                      
                       <div class="info">
                         <strong class="name">[##_list_rep_title_##]</strong>
+                        <!--
                         <p class="text summary">[##_list_rep_summary_##]</p>
-                        <span class="date">[##_list_rep_regdate_##]</span>
+                        -->
+                        <span class="date">[##_article_rep_simple_date_##]</span>
                       </div>
                     </a>
                   </li>
@@ -478,6 +502,8 @@
             </div>
             <!-- // area_category -->
           </s_list>
+
+          [##_revenue_list_lower_##]
 
           <!-- area_view -->
           <s_article_rep>
@@ -555,7 +581,7 @@
                                 <span class="thumnail item-thumbnail" data-src="<s_article_related_rep_thumbnail>[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"></span>
                                 <div class="box_content">
                                   <strong>[##_article_related_rep_title_##]</strong>
-                                  <span class="info">[##_article_related_rep_date_##]</span>
+                                  <span class="info">[##_article_rep_simple_date_##]</span>
                                 </div>
                               </a>
                             </li>
@@ -709,7 +735,7 @@
                   <div class="inner_header" style="background-image:url('<s_article_rep_thumbnail>[##_notice_rep_thumbnail_url_##]</s_article_rep_thumbnail>')">
                     <div class="info_text">
                       <strong class="title_post">[##_article_rep_title_##]</strong>
-                      <p class="info"><span class="date">[##_article_rep_date_##]
+                      <p class="info"><span class="date">[##_article_rep_simple_date_##]
                         </span></p>
                     </div>
                   </div>
@@ -734,7 +760,7 @@
                   <div class="inner_header">
                     <div class="info_text">
                       <strong class="title_post">[##_article_rep_title_##]</strong>
-                      <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
+                      <p class="info"><span class="date">[##_article_rep_simple_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
                       <s_ad_div>
                         <div class="admin_inner">
                           <span class="admin"><a href="[##_s_ad_m_link_##]">수정</a></span> |
@@ -771,7 +797,9 @@
                     <span class="thumnail item-thumbnail" style="background-image:url('<s_notice_rep_thumbnail>[##_notice_rep_thumbnail_url_##]</s_notice_rep_thumbnail>')"></span>
                     <div class="info">
                       <strong class="name">[##_notice_rep_title_##]</strong>
+                      <!--
                       <p class="text summary">[##_notice_rep_summary_##]</p>
+                      -->
                       <span class="date">[##_notice_rep_date_##]</span>
                     </div>
                   </a>
@@ -987,10 +1015,14 @@
 
     <!-- 모비일 하단 메뉴 -->
     <div class="mo_footer_menu bg_them_mode">
+      <div class="menu moreMenu"><a href="#0"><i class="ic-moreMenu"></i><p>MENU</p></a></div>
       <div class="menu home_mo"><a href="/" title="[##_title_##]" class="logo"><i class="ic-home"></i><p>HOME</p></a></div>
       <div class="menu share_js"><a href="#none"><i class="ic-share"></i><p>SHARE</p></a></div>  
+      
+      <!--
       <div class="menu themMode"><a href="#0"><i class="ic-moon"></i><p>DARK</p></a></div>
-      <div class="menu moreMenu"><a href="#0"><i class="ic-moreMenu"></i><p>MENU</p></a></div>
+      -->
+      
     </div>
     <!-- // 모비일 하단 메뉴 -->
   </s_t3>

@@ -608,8 +608,8 @@ function tistoryLighthouseCheck() {
   const detail_category = _tr(".another_category");
   const editEntry = document.querySelector("#editEntry");
   const cancel = document.querySelector(".lb-cancel");
-  const lightbox = document.querySelector("#lightbox");
-  const lightboxOverlay = document.querySelector("#lightboxOverlay");
+  // const lightbox = document.querySelector("#lightbox");
+  // const lightboxOverlay = document.querySelector("#lightboxOverlay");
   const declaration = Array.from(
     document.querySelectorAll(".area_reply .item_reply .date a")
   );
@@ -652,7 +652,7 @@ function tistoryLighthouseCheck() {
         }
       });
     }, 1000);
-  lightbox.remove();
-  lightboxOverlay.remove();
+  // lightbox.remove();
+  // lightboxOverlay.remove();
 }
 /* 티스토리에서 자동 삽입되는 요소 중에 lighthouse 퍼포먼스 체크에 방해되는 요소들 개선 // */
